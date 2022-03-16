@@ -1,0 +1,13 @@
+POST http://localhost:3000/accounts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTEsImlhdCI6MTY0NzQ1OTU2MSwiZXhwIjoxNjQ3NTQ1OTYxfQ.k8SYym5hh3ix98c88UsMzbWViu5M2wsnYKbw_l7fXHk
+
+{
+    "group_id" : "1"
+}
+###
+GET http://localhost:3000/accounts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTEsImlhdCI6MTY0NzQ1OTU2MSwiZXhwIjoxNjQ3NTQ1OTYxfQ.k8SYym5hh3ix98c88UsMzbWViu5M2wsnYKbw_l7fXHk
+
+###
