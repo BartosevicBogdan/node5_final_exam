@@ -1,0 +1,31 @@
+{
+  "name": "node5_final_exam",
+  "version": "1.0.0",
+  "description": "final node.js exam",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon src/server.js",
+    "lf": "eslint src --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BartosevicBogdan/node5_final_exam.git"
+  },
+  "author": "Bogdan Bartosevic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BartosevicBogdan/node5_final_exam/issues"
+  },
+  "homepage": "https://github.com/BartosevicBogdan/node5_final_exam#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.11.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.4"
+  }
+}
