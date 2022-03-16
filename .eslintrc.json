@@ -13,6 +13,8 @@
     },
     "rules": {
         "no-console": "off",
-        "consistent-return": "warn"
+        "consistent-return": "warn",
+        "linebreak-style": "off",
+        "semi":["error","none"]
     }
 }
