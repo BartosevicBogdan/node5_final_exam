@@ -13,7 +13,8 @@ app.use(morgan('common'));
 app.use(cors());
 app.use(express.json());
 
-app.get('/test', (req, res) => {
-  res.send('<h1>Respond to test request endpoint</h1>');
-});
+const authorizationRoute = require('./Routes/authorizationRoutes');
+
+app.use('', authorizationRoute);
+
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
