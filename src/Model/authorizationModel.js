@@ -3,6 +3,17 @@ const dbConfig = require('../../configuration/dbConfig');
 
 const table = 'users';
 
+function catchErrorObject(catchError, sqlRequestArguments) {
+  const obj = {
+    success: false,
+    message: 'database catched error',
+    sqlState: catchError.sqlState,
+    sqlMessage: catchError.sqlMessage,
+    enteredValues: sqlRequestArguments,
+  };
+  return obj;
+}
+
 async function registrationRequestDB(validValues) {
   try {
     const conn = await mysql.createConnection(dbConfig);
@@ -11,13 +22,7 @@ async function registrationRequestDB(validValues) {
     await conn.close();
     return fields;
   } catch (error) {
-    return {
-      success: false,
-      message: 'database catched error',
-      sqlState: error.sqlState,
-      sqlMessage: error.sqlMessage,
-      enteredValues: validValues,
-    };
+    return catchErrorObject(error, validValues);
   }
 }
 
