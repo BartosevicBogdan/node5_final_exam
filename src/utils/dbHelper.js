@@ -22,7 +22,18 @@ async function sqlExecute_ObjectValues(sql, validValues) {
     return catchErrorObject(error, validValues);
   }
 }
+async function sqlExecute_ArrayValues(sql, validValues) {
+  try {
+    const conn = await mysql.createConnection(dbConfig);
+    const [fields] = await conn.execute(sql, [validValues]);
+    await conn.close();
+    return fields;
+  } catch (error) {
+    return catchErrorObject(error, validValues);
+  }
+}
 
 module.exports = {
   sqlExecute_ObjectValues,
+  sqlExecute_ArrayValues,
 };
