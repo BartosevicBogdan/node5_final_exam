@@ -1,3 +1,5 @@
+const bcrypt = require('bcryptjs');
+
 function successResponce(res, data, status = 200) {
   res.status(status).json({
     success: true,
@@ -11,7 +13,11 @@ function failResponce(res, err = 'Something went wrong', status = 500) {
   });
 }
 
+function hashPass(plainPassword) {
+  return bcrypt.hashSync(plainPassword, 10);
+}
 module.exports = {
   successResponce,
   failResponce,
+  hashPass,
 };
