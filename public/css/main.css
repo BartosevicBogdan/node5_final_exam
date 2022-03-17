@@ -1,0 +1,76 @@
+* {
+  margin: 0px;
+  background: rgb(245, 245, 245);
+}
+
+header {
+  margin-block: 50px;
+  text-align: center;
+}
+
+header img {
+  width: 50%;
+}
+header p {
+  padding-top: 10px;
+}
+
+.register-section #error-container {
+  color: red;
+}
+.register-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.register-section h2 {
+  margin-bottom: 20px;
+}
+.register-section form {
+  width: 90%;
+  margin: 2rem;
+}
+.register-section form .row {
+  display: flex;
+  flex-direction: column;
+  margin-block: 10px;
+}
+.register-section form a {
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
+}
+.register-section form label {
+  margin-bottom: 5px;
+}
+.register-section form .row input {
+  border: 1px rgb(202, 202, 202) solid;
+  padding: 0.5rem;
+}
+
+.register-section form button {
+  padding: 0.5rem 2rem;
+  margin-block: 1rem;
+  border: 1px rgb(202, 202, 202) solid;
+}
+.register-section form button:hover {
+  background: rgb(202, 202, 202);
+  color: white;
+}
+@media screen and (min-width: 600px) {
+  header img {
+    width: 15%;
+  }
+  .register-section form {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  header img {
+    width: 15%;
+  }
+  .register-section form {
+    width: 35%;
+  }
+}

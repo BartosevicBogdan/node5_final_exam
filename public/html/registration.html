@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <script type="module" src="../js/registration.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <img src="../assets/logo.webp" alt="logo" />
+      <p>Best way to track your expenses</p>
+    </header>
+    <div class="register-section">
+      <h2>Register</h2>
+      <div id="error-container"></div>
+      <form id="regForm" class="form">
+        <div class="row">
+          <label for="full_name">Full Name:</label>
+          <input type="text" name="full_name" value="test rest" />
+        </div>
+        <div class="row">
+          <label for="email">Email:</label>
+          <input type="email" name="email" value="test@gmail.com" />
+        </div>
+        <div class="row">
+          <label for="password">Password:</label>
+          <input type="password" name="password" value="secret123" />
+        </div>
+        <div class="row">
+          <label for="password">Repeat Password:</label>
+          <input type="password" name="checkPassword" value="secret123" />
+        </div>
+        <button type="submit">Register</button>
+        <p>Or perhaps, just <a href="login.html">login</a>?</p>
+      </form>
+    </div>
+  </body>
+</html>
