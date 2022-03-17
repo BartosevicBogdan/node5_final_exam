@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <script type="module" src="../js/bills.js"></script>
+    <title>Bills</title>
+  </head>
+  <body>
+    <header>
+      <img src="../assets/logo.webp" alt="logo" />
+      <p>Best way to track your expenses</p>
+    </header>
+    <div class="table">
+      <h2>Group's bills:</h2>
+      <table>
+        <tr>
+          <th>ID</th>
+          <th>Description</th>
+          <th>Amount</th>
+        </tr>
+      </table>
+    </div>
+    <div class="form-section">
+      <form id="groupForm">
+        <h2>Add bill</h2>
+        <div class="row">
+          <label for="amount">Amount:</label>
+          <input type="number" name="amount" />
+        </div>
+        <div class="row">
+          <label for="description">Description:</label>
+          <input type="text" name="description" />
+        </div>
+        <button>Add bill</button>
+      </form>
+    </div>
+  </body>
+</html>
