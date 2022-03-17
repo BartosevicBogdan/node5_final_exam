@@ -2,7 +2,10 @@ import { baseURL, registerEndpoint } from '../Const.js';
 import { handleErrors } from './helper.js';
 
 async function registrationRequest(registrationData, errorsContainerEl) {
-  const serverResponseInJS = await registrationRequest_helper(registrationData);
+  const serverResponseInJS = await request_helper(
+    registrationData,
+    registerEndpoint,
+  );
   if (serverResponseInJS.success === true) {
     alert('logged in');
     window.location.replace(`login.html`);
@@ -10,8 +13,8 @@ async function registrationRequest(registrationData, errorsContainerEl) {
     handleErrors(serverResponseInJS.error, errorsContainerEl);
   }
 }
-async function registrationRequest_helper(registrationData) {
-  const requestServer = await fetch(`${baseURL + registerEndpoint}`, {
+async function request_helper(registrationData, endpoint) {
+  const requestServer = await fetch(`${baseURL + endpoint}`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
