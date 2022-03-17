@@ -1,0 +1,37 @@
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+    "full_name": "Vardenis Pavardenis",
+    "email": "pavardenis@gmail.com",
+    "password": "secret123"
+}
+###
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "email": "pavardenis@gmail.com",
+    "password": "secret123"
+}
+###
+
+####
+###
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+    "full_name": "Vardenis Pavardenis",
+    "email": "pavardenis1@gmail.com",
+    "password": "secret123"
+}
+###
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "email": "pavardenis@gmail.com",
+    "password": "secret123"
+}
+###
