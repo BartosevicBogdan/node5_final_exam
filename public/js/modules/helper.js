@@ -10,4 +10,10 @@ function handleErrors(erorrArray, errorsContainerEl) {
   }
 }
 
-export { handleErrors };
+function setToken(serverResponse) {
+  localStorage.setItem('login_token', serverResponse.data.token);
+}
+function getToken() {
+  return localStorage.getItem('login_token');
+}
+export { handleErrors, setToken, getToken };
