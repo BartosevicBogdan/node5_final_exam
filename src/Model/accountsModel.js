@@ -4,6 +4,7 @@ const {
 } = require('../utils/dbHelper');
 
 const table = 'accounts';
+
 async function createGroupDB(name) {
   const sql = `
   INSERT INTO groups (id, name) VALUES (NULL, ?) 
