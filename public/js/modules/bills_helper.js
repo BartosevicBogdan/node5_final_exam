@@ -6,6 +6,14 @@ async function renderBills(renderContainer, bill_Id) {
 }
 
 function makeTablRows(dataArray, renderContainer) {
+  renderContainer.innerHTML = `
+        <tr>
+          <th>ID</th>
+          <th>Description</th>
+          <th>Amount</th>
+        </tr>
+`;
+
   dataArray.forEach((element) => {
     const { id, amount, description } = element;
     const trElement = document.createElement('tr');
