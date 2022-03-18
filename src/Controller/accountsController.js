@@ -6,8 +6,10 @@ const {
 const { successResponce, failResponce } = require('../utils/controllerHelper');
 
 async function createAccoutRecord(req, res) {
+  const groupInsert = await createGroupDB(req.body.name);
+  const { insertId: group_id } = groupInsert;
   const newRecordData = {
-    group_id: parseInt(req.body.group_id),
+    group_id: group_id,
     user_id: req.token.id,
   };
   const serverResponseJS = await createAccountRecordDB(newRecordData);

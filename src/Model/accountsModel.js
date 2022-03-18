@@ -4,7 +4,12 @@ const {
 } = require('../utils/dbHelper');
 
 const table = 'accounts';
-
+async function createGroupDB(name) {
+  const sql = `
+  INSERT INTO groups (id, name) VALUES (NULL, ?) 
+  `;
+  return sqlExecute_ArrayValues(sql, name);
+}
 async function accountTableDB(userId) {
   const sql = `
     SELECT accounts.id AS "id", groups.name AS "group", accounts.user_id AS "user_id" 
@@ -20,4 +25,4 @@ async function createAccountRecordDB(validValues) {
   return sqlExecute_ObjectValues(sql, validValues);
 }
 
-module.exports = { accountTableDB, createAccountRecordDB };
+module.exports = { accountTableDB, createAccountRecordDB, createGroupDB };
