@@ -1,6 +1,7 @@
 const {
   accountTableDB,
   createAccountRecordDB,
+  createGroupDB,
 } = require('../Model/accountsModel');
 
 const { successResponce, failResponce } = require('../utils/controllerHelper');

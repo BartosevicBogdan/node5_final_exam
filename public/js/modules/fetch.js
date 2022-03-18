@@ -9,6 +9,7 @@ import { getToken, handleErrors, setToken } from './helper.js';
 
 async function pushBills(billData) {
   const serverResponseInJS = await request_helper(billData, billsEndpoint);
+  console.log(serverResponseInJS);
   if (serverResponseInJS.success === true) {
     alert('Bill created');
     location.reload();
@@ -16,10 +17,12 @@ async function pushBills(billData) {
 }
 async function pullBillsByGroupId(id) {
   const serverResponseInJS = await pullRequest_helper(`${billsEndpoint + id}`);
+  console.log(serverResponseInJS);
   return serverResponseInJS;
 }
 async function pullAccounts() {
   const serverResponseInJS = await pullRequest_helper(accountsEndpoint);
+  console.log(serverResponseInJS);
   return serverResponseInJS;
 }
 async function pushAccounts(requestData) {
@@ -27,6 +30,7 @@ async function pushAccounts(requestData) {
     requestData,
     accountsEndpoint,
   );
+
   if (serverResponseInJS.success === true) {
     alert('Group created');
     location.reload();
