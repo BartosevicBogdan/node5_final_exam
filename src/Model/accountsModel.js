@@ -13,7 +13,7 @@ async function createGroupDB(name) {
 }
 async function accountTableDB(userId) {
   const sql = `
-    SELECT accounts.id AS "id", groups.name AS "group_name", group_id, accounts.user_id AS "user_id" 
+    SELECT accounts.id AS "id", groups.name AS "group_name", group_id, accounts.user_id AS "user_id"  
     FROM ${table}
     INNER JOIN groups ON accounts.group_id = groups.id
     WHERE user_id = ?`;
