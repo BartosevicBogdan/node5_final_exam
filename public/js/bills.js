@@ -1,6 +1,8 @@
 import { renderBills } from './modules/bills_helper.js';
 import { pushBills } from './modules/fetch.js';
 
+if (!getToken()) window.location.replace(`login.html`);
+
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const bill_Id = urlParams.get('billID');

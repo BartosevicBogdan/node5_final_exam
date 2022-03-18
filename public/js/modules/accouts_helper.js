@@ -4,6 +4,7 @@ const linkURL = 'bills.html?';
 
 async function renderAccounts(renderContainer) {
   const accounts = await pullAccounts();
+  // renderContainer.innerHTML = '';
   makeCards(accounts.data, renderContainer);
 }
 
