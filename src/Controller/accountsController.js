@@ -1,6 +1,7 @@
 const {
   accountTableDB,
   createAccountRecordDB,
+  createGroupDB,
 } = require('../Model/accountsModel');
 
 const { successResponce, failResponce } = require('../utils/controllerHelper');
@@ -18,8 +19,10 @@ async function createAccoutRecord(req, res) {
     ? failResponce(res)
     : successResponce(res, serverResponseJS);
 }
+
 async function getAccoutRecords(req, res) {
   const user_id = req.token.id;
+  console.log(user_id);
   const serverResponseJS = await accountTableDB(user_id);
 
   return serverResponseJS === false
